@@ -36,8 +36,11 @@
 
 <link rel="stylesheet" type="text/css" href="files/assets/css/style.css">
 <link rel="stylesheet" type="text/css" href="files/assets/css/widget.css">
-<!-- <link rel="stylesheet" type="text/css" href="files/assets/css/style.css"> -->
-<link rel="stylesheet" type="text/css" href="files/assets/css/pages.css">
+
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="css/buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="css/cust.css">
+
 </head>
 <body>
 
@@ -181,7 +184,7 @@
 </a>
 <ul class="pcoded-submenu">
 <li class=" ">
-<a href="bs-basic-table.html" class="waves-effect waves-dark">
+<a href="nrecord.html" class="waves-effect waves-dark">
 <span class="pcoded-mtext">Nursing Visits Record</span>
 </a>
  </li>
@@ -226,86 +229,44 @@
 </div>
 </nav>
 
-<div class="pcoded-content">
+<div class="container">
 
-<div class="page-header card">
-<div class="row align-items-end">
-<div class="col-lg-8">
-<div class="page-header-title">
-<i class="feather icon-credit-card bg-c-blue"></i>
-<div class="d-inline">
-<h5>Bootstrap Basic Tables</h5>
-<span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
-</div>
- </div>
-</div>
-<div class="col-lg-4">
-<div class="page-header-breadcrumb">
-<ul class=" breadcrumb breadcrumb-title">
-<li class="breadcrumb-item">
-<a href="index.html"><i class="feather icon-home"></i></a>
-</li>
-<li class="breadcrumb-item"><a href="#!">Bootstrap Tables</a>
-</li>
-<li class="breadcrumb-item">
-<a href="#!">Basic Tables</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+<div class="mainner">
+	<h3 class="text-center">General Report</h3>
+<table id="example">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011/07/25</td>
+                <td>$170,750</td>
+            </tr>
 
-
-
-<div class="card">
-<div class="card-header">
-<h5>Basic Table</h5>
-<span>use class <code>table</code> inside table element</span>
-<div class="card-header-right"> <ul class="list-unstyled card-option"> <li class="first-opt"><i class="feather icon-chevron-left open-card-option"></i></li> <li><i class="feather icon-maximize full-card"></i></li> <li><i class="feather icon-minus minimize-card"></i></li> <li><i class="feather icon-refresh-cw reload-card"></i></li> <li><i class="feather icon-trash close-card"></i></li> <li><i class="feather icon-chevron-left open-card-option"></i></li> </ul> </div>
-</div>
-<div class="card-block table-border-style">
-<div class="table-responsive">
-<table class="table">
-<thead>
-<tr>
-<th>#</th>
-<th>First Name</th>
-<th>Last Name</th>
-<th>Username</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row">1</th>
-<td>Mark</td>
- <td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope="row">2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope="row">3</th>
-<td>Larry</td>
-<td>the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
+</tbody class="news">
+       
+    </table>
 </div>
 </div>
-</div>
-
-</div>
-
-
-
-
-
 
 
 <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="files/bower_components/jquery/js/jquery.min.js"></script>
@@ -319,14 +280,19 @@
 
 <script src="files/assets/pages/chart/float/jquery.flot.js"></script>
 <script src="files/assets/pages/chart/float/jquery.flot.categories.js"></script>
-<script src="files/assets/pages/chart/float/curvedLines.js"></script>
-<script src="files/assets/pages/chart/float/jquery.flot.tooltip.min.js"></script>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.buttons.min.js"></script>
+<script src="js/buttons.flash.min.js"></script>
+<script src="js/jszip.min.js"></script>
+<script src="js/pdfmake.min.js"></script>
+<script src="js/vfs_fonts.js"></script>
+<script src="js/buttons.html5.min.js"></script>
+<script src="js/buttons.print.min.js"></script>
 
-<script src="files/bower_components/chartist/js/chartist.js"></script>
 
-<script src="files/assets/pages/widget/amchart/amcharts.js"></script>
-<script src="files/assets/pages/widget/amchart/serial.js"></script>
-<script src="files/assets/pages/widget/amchart/light.js"></script>
+
+
 
 <script src="files/assets/js/pcoded.min.js"></script>
 <script src="files/assets/js/vertical/vertical-layout.min.js"></script>
@@ -340,6 +306,18 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-23581568-13');
+</script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+} );
 </script>
 </body>
 
